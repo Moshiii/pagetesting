@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
   <style>
     /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -41,13 +42,28 @@
       });
 
 
+      var SQUARE_PIN = {
+        path: 'M36-30h-72v25h30l6 5 6-5h30z',
+        fillColor: '#db3236',
+        fillOpacity: 1,
+        labelOrigin: new google.maps.Point(0,-17),
+        strokeColor: '',
+        strokeWeight: 0
+        };
+
         var marker = new google.maps.Marker({
         position: new google.maps.LatLng(43.791066, -79.366869),
-        label: "樱花寿司",
-        map: map
+        icon: SQUARE_PIN,
+        map: map,
+        label: {
+          text:"樱花寿司",
+          color: '#fff',
+          fontWeight:"2px"
+        }
       });
       
 
+      
       marker.addListener('click', function() {
         //marker.setVisible(false);
         infowindow.open(map, marker);
