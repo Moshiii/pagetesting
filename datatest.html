@@ -2,95 +2,105 @@
 <html>
 
 <head>
-
-  <style>
-    /* Always set the map height explicitly to define the size of the div
+    <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBPjDsLqv2iBkPaSFMqJRvD3muUzsasnic",
+            authDomain: "sturdy-hangar-140318.firebaseapp.com",
+            databaseURL: "https://sturdy-hangar-140318.firebaseio.com",
+            storageBucket: "sturdy-hangar-140318.appspot.com",
+            messagingSenderId: "460286581822"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-    
-    #map {
-      height: 600px;
-    }
-    /* Optional: Makes the sample page fill the window. */
-    
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
+        
+        #map {
+            height: 600px;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        
+        html,
+        body {
+            height: 100%;
+            /*margin: 0;
+            padding: 0;*/
+        }
+    </style>
 </head>
 
 <body>
-  <div id="map"></div>
-  <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 19,
-          //center: new google.maps.LatLng(2.8,-187.3),
-          center: new google.maps.LatLng(43.791087,-79.3670009),
-          mapTypeId: 'terrain'
-        });
+    <div id="map"></div>
+    <div id="dbroot"></div>
+    <script>
+        var dbroot = document.getElementById('dbroot');
+        var dbref = firebase.database().ref().child('text');
+        dbref.on('value', snap => dbroot.innerText = snap.val());
+        var map;
 
-      var contentString = '<div id="content">'+
-          '<h1 id="firstHeading" class="firstHeading">樱花寿司</h1>'+
-          '</div>';
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 19,
+                //center: new google.maps.LatLng(2.8,-187.3),
+                center: new google.maps.LatLng(43.791087, -79.3670009),
+                mapTypeId: 'terrain'
+            });
 
-      var infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
+            var contentString = '<div id="content">' +
+                '<h1 id="firstHeading" class="firstHeading">樱花寿司</h1>' +
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
 
 
-      var SQUARE_PIN = {
-        path: 'M36-30h-72v25h30l6 5 6-5h30z',
-        fillColor: '#db3236',
-        fillOpacity: 1,
-        labelOrigin: new google.maps.Point(0,-17),
-        strokeColor: '',
-        strokeWeight: 0
+            var SQUARE_PIN = {
+                path: 'M36-30h-72v25h30l6 5 6-5h30z',
+                fillColor: '#db3236',
+                fillOpacity: 1,
+                labelOrigin: new google.maps.Point(0, -17),
+                strokeColor: '',
+                strokeWeight: 0
+            };
+
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(43.791066, -79.366869),
+                icon: SQUARE_PIN,
+                map: map,
+                label: {
+                    text: '樱花寿司',
+                    color: '#fff',
+                    fontWeight: '2px'
+                }
+            });
+
+
+
+            marker.addListener('click', function() {
+                //marker.setVisible(false);
+                infowindow.open(map, marker);
+            });
         };
 
-        var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(43.791066, -79.366869),
-        icon: SQUARE_PIN,
-        map: map,
-        label: {
-          text:"樱花寿司",
-          color: '#fff',
-          fontWeight:"2px"
-        }
-      });
-      
-
-      
-      marker.addListener('click', function() {
-        //marker.setVisible(false);
-        infowindow.open(map, marker);
-      });
-        // Create a <script> tag and set the USGS URL as the source.
-        var script = document.createElement('script');
-        // This example uses a local copy of the GeoJSON stored at
-        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-        script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-      }
-
-      // Loop through the results array and place a marker for each
-      // set of coordinates.
-      window.eqfeed_callback = function(results) {
-        for (var i = 0; i < results.features.length; i++) {
-          var coords = results.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[1],coords[0]);
-          var marker = new google.maps.Marker({
-            position: latLng,
-            map: map
-          });
-        }
-      }
+        // Loop through the results array and place a marker for each
+        // set of coordinates.
+        // window.eqfeed_callback = function(results) {
+        //   for (var i = 0; i < results.features.length; i++) {
+        //     var coords = results.features[i].geometry.coordinates;
+        //     var latLng = new google.maps.LatLng(coords[1],coords[0]);
+        //     var marker = new google.maps.Marker({
+        //       position: latLng,
+        //       map: map
+        //     });
+        //   }
+        // }
     </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADab1WdCAqHiRQsvHRSzrflBK1d0KWRbA&callback=initMap">
-</script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADab1WdCAqHiRQsvHRSzrflBK1d0KWRbA&callback=initMap">
+    </script>
 </body>
 
 </html>
