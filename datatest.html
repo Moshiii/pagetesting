@@ -39,13 +39,19 @@
         var dbroot = document.getElementById('dbroot');
         var dbref = firebase.database().ref().child('text');
         dbref.on('value', snap => dbroot.innerText = snap.val());
+
+
+
         var map;
 
         function initMap() {
+
+            var myhome = {lat: 43.791087, lng: -79.3670009};
+
             map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 19,
                 //center: new google.maps.LatLng(2.8,-187.3),
-                center: new google.maps.LatLng(43.791087, -79.3670009),
+                center: myhome,
                 mapTypeId: 'terrain'
             });
 
@@ -53,9 +59,9 @@
                 '<h1 id="firstHeading" class="firstHeading">樱花寿司</h1>' +
                 '</div>';
 
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
+            var infowindow = new google.maps.InfoWindow();
+            var service = new google.maps.places.PlacesService(map);
+            infowindow.setContent(contentString);
 
 
             var SQUARE_PIN = {
@@ -67,8 +73,40 @@
                 strokeWeight: 0
             };
 
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(43.791066, -79.366869),
+
+
+            var marker1 = new google.maps.Marker({
+                position: new google.maps.LatLng(43.791022, -79.366498),
+                icon: SQUARE_PIN,
+                map: map,
+                label: {
+                    text: '樱花寿司',
+                    color: '#fff',
+                    fontWeight: '2px'
+                }
+            });
+            var marker2 = new google.maps.Marker({
+                position: new google.maps.LatLng(43.791111, -79.366888),
+                icon: SQUARE_PIN,
+                map: map,
+                label: {
+                    text: '天皇名粥',
+                    color: '#fff',
+                    fontWeight: '2px'
+                }
+            });
+            var marker3 = new google.maps.Marker({
+                position: new google.maps.LatLng(43.791396, -79.366499),
+                icon: SQUARE_PIN,
+                map: map,
+                label: {
+                    text: 'chatime',
+                    color: '#fff',
+                    fontWeight: '2px'
+                }
+            });
+            var marker4 = new google.maps.Marker({
+                position: new google.maps.LatLng(43.791588, -79.366244),
                 icon: SQUARE_PIN,
                 map: map,
                 label: {
@@ -78,11 +116,36 @@
                 }
             });
 
+            var marker5 = new google.maps.Marker({
+                position: new google.maps.LatLng(43.791300, -79.366820),
+                icon: SQUARE_PIN,
+                map: map,
+                label: {
+                    text: '樱花寿司',
+                    color: '#fff',
+                    fontWeight: '2px'
+                }
+            });
 
-
-            marker.addListener('click', function() {
+            marker1.addListener('click', function() {
                 //marker.setVisible(false);
-                infowindow.open(map, marker);
+                infowindow.open(map, marker1);
+            });
+            marker2.addListener('click', function() {
+                //marker.setVisible(false);
+                infowindow.open(map, marker2);
+            });            
+            marker3.addListener('click', function() {
+                //marker.setVisible(false);
+                infowindow.open(map, marker3);
+            });            
+            marker4.addListener('click', function() {
+                //marker.setVisible(false);
+                infowindow.open(map, marker4);
+            });            
+            marker5.addListener('click', function() {
+                //marker.setVisible(false);
+                infowindow.open(map, marker5);
             });
         };
 
@@ -99,7 +162,7 @@
         //   }
         // }
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADab1WdCAqHiRQsvHRSzrflBK1d0KWRbA&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADab1WdCAqHiRQsvHRSzrflBK1d0KWRbA&libraries=places&callback=initMap">
     </script>
 </body>
 

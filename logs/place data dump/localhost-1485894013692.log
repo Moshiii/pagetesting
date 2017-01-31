@@ -1,0 +1,21 @@
+later-chrome.js:5 Later for Chrome extension loaded
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "8ce40e17b89f414bc04637e558da59c4abe8392a", name: "The UPS Store", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "68d3122089d330266988888f288023889c006c57", name: "Beachwear Unlimited", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "4e1b1a518635866140874490f639f9936616ade3", name: "Baskin Robbins", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "d35abda191bcc4b174fb9dd99a5fa3e9baf7f5b0", name: "Naot Footwear", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "825102735279b38e58d73cabbb24b40791f7b2bc", name: "Shoppers Drug Mart", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "938a93f4a11f9d44efb00372c208dc26a354ace9", name: "Sunny Supermarket", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png", id: "64b66b83e29e05ab52d851dee6031cee075add3e", name: "Beer Store", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "3737829bfa2c3528778b01bca3236b89cb8eda63", name: "Connect Hearing", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "85c7c5767af1dcbbb66963e176d0d4e85ced7355", name: "Jack's nofrills", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "c83fb627ca8e4e9541d688010a6970905d279f31", name: "Ivy Leaf Designs", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "b9bc7176b91051f0dc0a44d68405831f12c583ad", name: "Tim Hortons", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "79352444e562e149692e5db9865d5415dbe55886", name: "Shoppers Drug Mart", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "ab547f7c094cd6e246d824f18347d92a03c5ec45", name: "Karats Fine Jewellery", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "9f96e1538b9deca4256020cad3eb92c77d3c2c63", name: "Tim Hortons", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/gas_station-71.png", id: "e885762da1f5b19e86a9275f14ebb5ef3e1dca3e", name: "Esso", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png", id: "c954bb96c7aa6931031978030ba9d0cf8c924e62", name: "Gloucester Bakery", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "e5848402f15bc6bf6cc2a25b04fda2f0119f0a65", name: "Leslie Medical Pharmacy", place_id: "ChIJ3UlR2sTS1IkRY2gOu3l1kMI"…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "8b15598a7649c4bacacd6656a7a3f9c7160d2eef", name: "Winexpert North York", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", id: "868d2f79720c371f14fafb38e37ec03bfa2bb5cd", name: "Finch-Leslie Pharmacy", opening_hours: Object…}
+placetest:87 Object {geometry: Object, icon: "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png", id: "5a492d6c4444286445d67d877cbdb6517e8f50f3", name: "Hai Yang International Inc", place_id: "ChIJ-6nfL8bS1IkRdz0ZajyM2hg"…}
