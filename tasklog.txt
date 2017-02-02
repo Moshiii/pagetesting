@@ -19,5 +19,14 @@
                     //已经建立了datamodel
                     上传处理好的数据至firebase
                     以google location id 作为key 确保每条餐馆数据都是独特的 无重复
+                   
+            需要找服务器提供商 
+                什么架构的？php java python ruby nodejs？
+                预算多少？ 初步感觉一个月最多3块钱吧。。。。。
+                怎么写服务器端代码？
+                服务器要包括什么功能？
+                    数据库授权信息要放在服务器上
+                    google map api key 可以明文 已经在账户中限制了域名 不怕盗
                     
-                google map api query geoencoding
+                 
+            google map api query geoencoding
