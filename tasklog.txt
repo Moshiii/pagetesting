@@ -1,0 +1,23 @@
+ 地图项目：
+        学习google map api 把自己的地图上线运营了
+            //地图在github page已经免费上线 
+            //data页面测试成功
+            //离线数据库搭建完成  在E:\@workspace\GithubRepo\pagetesting 下 cmd-> http-server
+            //port localhost：8080/datatest.html
+
+            //加入数据库支持 firebase 已成功加入
+                设计data model 用json
+                
+            加入筛选功能 分类 面 奶茶 
+            加入是否有外卖的标签
+            加入反馈发email的功能 如果用户发现缺少或者信息不准确可以给我发email
+
+            如何大规模扒餐馆数据
+                目前信息 google place api  
+                    //查到了 google place api的教程了
+                    //已成功从google place api上扒取数据 
+                    //已经建立了datamodel
+                    上传处理好的数据至firebase
+                    以google location id 作为key 确保每条餐馆数据都是独特的 无重复
+                    
+                google map api query geoencoding
