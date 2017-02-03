@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <style>
-       #map {
-        height: 800px;
-        width: 100%;
-       }
-    </style>
+    <meta charset="utf-8">
+    <title>美食天堂-Food Paradise</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
-
 <body>
-  <h3>美食地图</h3>
-  <div id="map"></div>
-  <script>
-    function initMap() {
-      var Toronto = { lat: 43.653226, lng: -79.38318429999998 };
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: Toronto
-      });
-
-      var marker = new google.maps.Marker({
-        position: Toronto,
-        map: map
-      });
-    }
-  </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADab1WdCAqHiRQsvHRSzrflBK1d0KWRbA&callback=initMap">
+<div id="search_bar">
+    <div>
+        <form id="map-search-wrapper" data-role="none" class="controls" data-enhance="false">
+            <input id="map-search-input" type="text" data-role="none" data-enhance="false" placeholder="输入地址">
+            <div id="btn-locate"></div>
+        </form>
+    </div>
+    <div>
+        <form id="dash-search-wrapper" data-role="none" class="controls" data-enhance="false">
+            <select id="dash-search-input">
+                <option value="菜系">菜系</option>
+                <option value="川菜">川菜</option>
+                <option value="鲁菜">鲁菜</option>
+                <option value="粤菜">粤菜</option>
+                <option value="苏菜">苏菜</option>
+                <option value="浙菜">浙菜</option>
+                <option value="闽菜">闽菜</option>
+                <option value="湘菜">湘菜</option>
+                <option value="徽菜">徽菜</option>
+            </select>
+        </form>
+    </div>
+</div>
+<div id="map"></div>
+<script src="Scripts/initMap.js" type="text/javascript"></script>
+<div class="footer">
+    <div class="left_footer">美食天堂 Food Paradise<br/></div>
+    <div class="right_footer">
+        <a href="#">contact us</a> / <a href="#">privacy policy</a>
+    </div>
+</div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH92tSO-RAUy3AKSq3vHV4gv9pLCiDtlg&callback=initMap">
+    //src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADab1WdCAqHiRQsvHRSzrflBK1d0KWRbA&callback=initMap">
 </script>
 </body>
-
 </html>
