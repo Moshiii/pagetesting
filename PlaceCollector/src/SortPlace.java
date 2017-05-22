@@ -1,3 +1,4 @@
+import java.io.*;
 import java.nio.file.Files;
 
 public class SortPlace {
@@ -5,13 +6,13 @@ public class SortPlace {
     public static void main(String[] args) throws IOException {
         System.out.println("Starting sorting place...");
         SortPlace sortPlace = new SortPlace();
-        sortPlace.sorting("PlaceCollector/localhost.log");
+        sortPlace.sorting("src/localhost.log");
         System.out.println("Done!");
     }
 
     private void sorting(String filename) throws IOException {
         String text = reader(filename);
-        writer("PlaceCollector/place.txt", text);
+        writer("src/place.txt", text);
     }
 
     private String reader(String filename) throws IOException {
@@ -25,13 +26,15 @@ public class SortPlace {
             temp1 += line;
         }
 
-        //need to change when start a new gathering season
         temp1 = temp1.replace(".html?_ijt=33j0l59q04m27u80mgdaleg561:49", "");
+        //temp1 = temp1.replace("=o1jah72ue", "");
+        //temp1 = temp1.replace("0jc64iij65", "");
+        //temp1 = temp1.replace("2qilocc:49", "");
 
         temp2 = temp1.split("Collector ");
 
         for (int i = 1; i < temp2.length; i++) {
-            text += temp2[i] + "\t\n";
+            text += temp2[i] + "\n";
         }
 
         return text;
