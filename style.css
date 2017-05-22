@@ -89,7 +89,7 @@ select {
 #btn-locate {
     position: relative;
     top: -30px;
-    margin-right: 0;
+    margin-right: 5;
     width: 28px;
     height: 28px;
     background: #fff url("Icons/ic_arrow_forward_black_24dp_1x.png") no-repeat center center;
